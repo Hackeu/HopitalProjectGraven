@@ -27,7 +27,6 @@ textarea:focus{
     background-position: center;
     background-size: 100%;
     background-attachment: fixed;
-    background-blend-mode: difference;
 }
 /*----- haut de page -----*/
 #home header{
@@ -96,8 +95,9 @@ textarea:focus{
 #home div nav ul li input{
     display: none;
 }
-#home div nav ul li input:checked ~ ul{
+#home div nav input:checked ~ ul{
     visibility: visible;
+    opacity: 1;
 }
 /*--X-- menu de navigation --X--*/
 /*----- bannière d'accueil -----*/
@@ -112,7 +112,6 @@ textarea:focus{
     height: 200px;
     width: 200px;
     margin-top: 20px;
-    z-index: 2;
     position: absolute;
     left: 43vw;
 }
@@ -196,6 +195,7 @@ textarea:focus{
     background-position: center;
     background-attachment: fixed;
     background-size: 100%;
+    background-repeat: no-repeat;
     height: 50vh;
     display: flex;
     justify-content: center;
@@ -213,7 +213,7 @@ textarea:focus{
     text-align: center;
     margin-bottom: 100px;
     position: relative;
-    top: 60px;
+    top: 100px;
     color: black;
 }
 #services #divBlock #secondDiv{
@@ -307,7 +307,7 @@ textarea:focus{
     width: 150%;
     display: flex;
     flex-direction: column;
-    background: rgba(248, 242, 242, 0.1);
+    background: rgba(38, 40, 41, 0.8);
     padding: 10px;
     border-radius: 20px;
 }
@@ -323,7 +323,7 @@ textarea:focus{
     outline: none;
 }
 #appointment > div form button{
-    width: 25%;
+    width: 30%;
     padding: 6px;
     margin: 4px;
     background: var(--firstColor);
@@ -426,11 +426,11 @@ textarea:focus{
 }
 #doctors #specialists h6{
     font-family: Poppins;
-    color: var(--thirdColor);
+    color: var(--secondColor);
 }
 #doctors #specialists h4{
     font-family: Abel;
-    color: var(--secondColor);
+    color: black;
 }
 /*--X-- Médecins --X--*/
 
@@ -537,7 +537,7 @@ textarea:focus{
     width: 50%;
     display: flex;
     flex-direction: column;
-    background: rgba(20, 86,102,.9);
+    background: rgba(38, 40, 41, 0.8);
     padding: 10px;
     border-radius: 20px;
 }
@@ -591,6 +591,7 @@ textarea:focus{
 }
 #facts #chiffres #chiffre div{
     margin: 15px;
+    text-align: center;
 }
 #facts #chiffres #chiffre div h3{
     font-family: Poppins;
@@ -667,3 +668,518 @@ footer + p{
     padding: 4px;
 }
 /*--X-- pied de page --X--*/
+
+
+/*----- R E S P O N S I V I T E -----*/
+@media screen and (max-width: 2000px){
+    /*----- menu de navigation -----*/
+    #home{
+        background-attachment: unset;
+        height: 100vh;
+    }
+    /*----- bannière d'accueil -----*/
+    #home div.banner img{
+       margin-top: 10px;
+    }
+    #home div.banner div:nth-child(2){
+        background-color: transparent;
+        position: relative;
+        top: -20px;
+    }
+    /*----- Soins -----*/
+    #services #divBlock #firstDiv{
+        color: aliceblue;
+        font-size: 50px;
+        top: 70px;
+    }
+}
+@media screen and (max-width: 1250px){
+     /*----- menu de navigation -----*/
+     #home{
+        background-attachment: unset;
+        height: 60vh;
+    }
+     /*----- bannière d'accueil -----*/
+     #home div.banner img{
+        margin-top: 50px;
+        width: 200px;
+        height: 200px;
+    }
+     #home div.banner div:nth-child(2){
+        background-color: transparent;
+        position: relative;
+        top: 0px;
+    }
+    /*----- Formulaire rendez-vous -----*/
+    #appointment > div form{
+        width: 120%;
+    }
+}
+@media screen and (max-width:1024px){
+    /*----- menu de navigation -----*/
+    #home{
+        height: 50vh;
+    }
+    /*----- bannière d'accueil -----*/
+    #home div.banner img{
+        margin-top: 10px;
+    }
+    #home div.banner div:nth-child(2){
+        top: -50px;
+    }
+    /*----- Soins -----*/
+    #services{
+        background-attachment: unset;
+    }
+    #services #divBlock #firstDiv{
+        color: aliceblue;
+        font-size: 50px;
+        top: 50px;
+    }
+    #services #divBlock #secondDiv{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    /*----- A Propos -----*/
+    #about{
+        margin: 100px;
+    }
+    /*----- Formulaire rendez-vous -----*/
+    #appointment > div{
+        justify-content: space-between;
+    }
+    /*----- Articles de blog -----*/
+    #news #articles{
+        height: 30vh;
+    }
+    #news #articles .article{
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+    #news #articles .article > div a{
+        opacity: 1;
+        height: 15vh;
+        border-radius: 0px;
+        overflow: hidden;
+    }
+    #news #articles .article img{
+        height: 100%;
+        opacity: 1;
+        border-radius: 0px;
+    }
+    #news #articles .article .description{
+        display: block;
+        height: 100%;
+        top: 0%;
+        text-align: left;
+        opacity: 1;
+        visibility: visible;
+        border-radius: 0px;
+        font-size: 14px;
+    }
+    #contact{
+        background-attachment: unset;
+    }
+}
+@media screen and (max-width: 930px){
+    /*----- bannière d'accueil -----*/
+    #home div.banner img{
+        margin-top: 50px;
+        width: 100px;
+        height: 100px;
+    }
+    #home div.banner div:nth-child(2){
+        background-color: transparent;
+        position: relative;
+        top: -100px;
+    }
+    /*----- Soins -----*/
+     #services #divBlock #firstDiv{
+         color: aliceblue;
+         font-size: 20px;
+         top: 80px;
+    }
+    /*----- Formulaire rendez-vous -----*/
+    #appointment > div{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 15px;
+        grid-column-gap: 15px;
+        justify-content: space-around;
+        align-content: center;
+        align-items: center;
+    }
+    #appointment > div h3{
+        font-size: 25px;
+    }
+    #appointment > div form{
+        width: 100%;
+    }
+    /*----- Articles de blog -----*/
+    #news #articles .article .description{
+        font-size: 14px;
+    }
+    /*----- Contact -----*/
+    #contact{
+        background-attachment: unset;
+    }
+}
+@media screen and (max-width: 500px){
+    /*-----------bannière principale-----------*/
+    #home{
+        height: 50vh;
+    }
+    #home header img{
+        height: 50px;
+        width: 50px;
+    }
+    #home header h1 a{
+        font-size: 40px;
+    }
+    #home header p{
+        font-size: 10px;
+    }
+    /* ----- menu de navigation ----- */
+    #home div nav{
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100vw;
+        height: 6vh;
+    }
+    #home div nav > label{
+        position: absolute;
+        top: 80px;
+        left: 4%;
+        color: aliceblue;
+        display: block;
+        z-index: 5;
+    }
+    #home div nav > ul{
+        background: var(--secondColor);
+        margin-top: 40px;
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center ;
+        visibility: hidden;
+        position: absolute;
+        transition: all 1s linear;
+        opacity: 0;
+    }
+    #home div nav > ul #list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        position: relative;
+    }
+    #home div nav > ul #list label{
+        position: relative;
+        margin: 0px 0px;
+        padding: 0px;
+    }
+    #home div nav > ul #list > a{
+        position: relative;
+        margin: 4px 0px 0px 0px;
+        padding: 0px;
+    }
+    #home div nav > ul li#squad{
+        position: relative;
+        top: -45px;
+    }
+    #home div nav > ul li#ctc{
+        position: relative;
+        top: -45px;
+    }
+    #home div nav ul a,
+    #home div nav ul label{
+        margin-top: 10px;
+        padding: 20px;
+        color: var(--fourthColor);
+        font-size: 16px;
+        font-family: Poppins;
+    }
+    #home div nav ul li ul{
+        position: relative;
+        margin-top: -25px;
+        padding: 0px;
+    }
+    #home div nav ul li ul li{
+        margin: 5px;
+    }
+    #home div nav ul li ul li a{
+        font-size: 20px;
+    }
+    #home div nav input:checked ~ ul{
+        visibility: visible;
+    }
+    /*----- bannière d'accueil -----*/
+    #home div.banner img{
+        height: 50px;
+        width: 50px;
+        margin-top: 30px;
+        left: 45vw;
+    }
+    #home div.banner div{
+        margin-top: 0%;
+    }
+    #home div.banner div h6{
+        font-size: 10px;
+        margin-top: -15px;
+    }
+    #home div.banner div h3{
+        font-size:15px;
+        margin: 5px;
+    }
+    #home div.banner div p{
+        font-size: 10px;
+    }
+    #home div.banner div button{
+        background: transparent;
+        border: none;
+    }
+    #home div.banner div button a{
+        height: 50%;
+        width: 50%;
+        position: relative;
+        top: -20px;
+        text-decoration: none;
+        color: aliceblue;
+        font-family: serif;
+        font-size: 12px;
+        transition: all 1s linear;
+        background: var(--secondColor);
+        padding: 5px;
+        margin: 20px;
+        border: 1px solid var(--secondColor);
+    }
+    /*----- Infos -----*/
+    #infos{
+        margin: 0px;
+        margin-bottom: 20px;
+        height: 10vh;
+        position: relative;
+    }
+    #infos > div{
+        grid-gap: 10px;
+        top: 0px;
+    }
+    #infos div .block{
+        font-size: 10px;
+    }
+    /*----- Soins -----*/
+    #services{
+        background-size: 150%;
+        overflow: hidden;
+    }
+    #services #divBlock{
+        padding: 0px 10px;
+    }
+    #services #divBlock #firstDiv{
+        top: 40px;
+    }
+    #services #divBlock #secondDiv{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        position: relative;
+        top: -50px;
+    }
+    #services #divBlock #secondDiv .blockDiv{
+        text-align: center;
+        background: rgb(20, 86, 102);
+        padding: 10px;
+        color: aliceblue;
+    }
+    #services #divBlock #secondDiv .blockDiv h4{
+        font-size: 15px;
+    }
+    #services #divBlock #secondDiv .blockDiv p{
+        font-size: 10px;
+    }
+    /*----- A Propos -----*/
+    #about{
+        margin: 50px 50px;
+    }
+    #about #ref div{
+        height: 90px;
+        width: 90px;
+    }
+    /*----- Formulaire rendez-vous -----*/
+    #appointment > div{
+        display: flex;
+        flex-direction: column;
+    }
+    #appointment > div form button{
+        width: 30%;
+    }
+    /*----- Médecins -----*/
+    #doctors{
+        background: rgb(191, 213, 231);
+        margin: 50px 0px;
+    }
+    #doctors > div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #doctors #title{
+        background: transparent;
+        border: none;
+        transition: all 1s linear;
+        position: relative;
+        top: -1em;
+    }
+    #doctors #specialists img{
+        width: 100px;
+        height: 150px;
+    }
+    /*----- Articles de blog -----*/
+    #news #articles{
+        height: 100vh;
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+    #news #articles .article > div{
+        height: 20vh;
+    }
+    #news #articles .article .description{
+        font-size: 12px;
+        padding-bottom: 40px;
+    }
+    /*----- Contact -----*/
+    #contact{
+        overflow: hidden;
+        background-size: 200%;
+    }
+    #contact form{
+        width: 100%;
+    }
+    /*----- Chiffres et témoignages -----*/
+    #facts{
+        display: flex;
+        flex-direction: column;
+    }
+    /*----- pied de page -----*/
+    footer{
+        padding: 20px 100px;
+        flex-direction: column;
+    }
+    footer > div h2 a{
+        font-family: Poppins;
+        font-size: 30px;
+        color: var(--firstColor);
+    }
+    footer > div h2 a img{
+        width: 40px;
+        height: 40px;
+    }
+}
+@media screen and (max-width: 400px){
+     /*-----------bannière principale-----------*/
+     #home header img{
+        height: 40px;
+        width: 40px;
+    }
+    #home header h1 a{
+        font-size: 30px;
+    }
+    #home header p{
+        font-size: 10px;
+    }
+    /* ----- menu de navigation ----- */
+    #home div nav > label{
+        position: absolute;
+        top: 65px;
+        left: 4%;
+        color: aliceblue;
+        display: block;
+        z-index: 5;
+    }
+    /*----- bannière d'accueil -----*/
+    #home div.banner img{
+        height: 50px;
+        width: 50px;
+        margin-top: 10px;
+        left: 45vw;
+    }
+    #home div.banner div h6{
+        font-size: 10px;
+        margin-top: -35px;
+    }
+    #home div.banner div h3{
+        font-size:15px;
+        margin: 5px;
+    }
+    #home div.banner div p{
+        font-size: 10px;
+    }
+    #home div nav > ul{
+        margin-top: 35px;
+    }
+    /*----- Soins -----*/
+    #services #divBlock #firstDiv{
+        top: 40px;
+    }
+    #services #divBlock #secondDiv .blockDiv h4{
+        font-size: 12px;
+    }
+    #services #divBlock #secondDiv .blockDiv p{
+        font-size: 8px;
+    }
+    /*----- A Propos -----*/
+    #about h3 + div p{
+        font-size: 14px;
+    }
+    #about #ref div{
+        font-size: 14px;
+        padding: 2px;
+        margin: 10px;
+        height: 70px;
+        width: 70px;
+    }
+    /*----- Formulaire rendez-vous -----*/
+    #appointment > div h3{
+        font-size: 20px;
+    }
+    #appointment > div form button{
+        width: 50%;
+    }
+    /*----- Articles de blog -----*/
+    #news #articles .article{
+        height: 300px;
+    }
+   /*----- Contact -----*/
+   #contact #title{
+       font-size: 20px;
+   }
+   #contact form button{
+       width: 50%;
+   }
+   /*----- Chiffres et témoignages -----*/
+   #facts #chiffres > h3{
+        font-size: 20px;
+    }
+    #facts #chiffres #chiffre div{
+        margin: 14px 0px;
+    }
+    #facts #chiffres #chiffre div h3{
+        width: 60px;
+        height: 60px;
+        font-size: 18px;
+    }
+    #facts #chiffres #chiffre div p{
+        font-size: 15px;
+    }
+}
