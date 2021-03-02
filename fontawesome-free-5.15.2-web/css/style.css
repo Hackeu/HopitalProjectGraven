@@ -172,7 +172,7 @@ textarea:focus{
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 100px;
     position: relative;
-    margin: 50px;
+    margin: 100px 10px;
 }
 #infos div .block{
     border: 1px solid transparent;
@@ -185,6 +185,7 @@ textarea:focus{
     height: 5em;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
+    font-size: 30px;
 }
 /*--X-- Infos --X--*/
 
@@ -411,7 +412,7 @@ textarea:focus{
     justify-content: space-evenly;
     align-content: center;
     align-items: center;
-    color: aliceblue;
+    color: black;
     text-align: center;
     /* border: 1px solid rgb(233, 222, 222); */
 }
@@ -832,6 +833,7 @@ footer + p{
     /*-----------bannière principale-----------*/
     #home{
         height: 50vh;
+        background-size: 200%;
     }
     #home header img{
         height: 50px;
@@ -969,7 +971,7 @@ footer + p{
     }
     #infos > div{
         grid-gap: 10px;
-        top: 0px;
+        margin: 30px 10px;
     }
     #infos div .block{
         font-size: 10px;
@@ -1088,6 +1090,9 @@ footer + p{
 }
 @media screen and (max-width: 400px){
      /*-----------bannière principale-----------*/
+     #home{
+        background-size: 200%;
+     }
      #home header img{
         height: 40px;
         width: 40px;
